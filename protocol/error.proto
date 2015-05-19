@@ -1,0 +1,8 @@
+package protocol;
+
+enum ERROR {
+    SUCCESS = 0;
+    NO_FOUND_USER = 1;
+    INVALID_PASSWORD = 2;
+    ALREADY_LOGINED = 3;
+}

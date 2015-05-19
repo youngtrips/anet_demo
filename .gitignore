@@ -1,0 +1,17 @@
+.DS_Store
+.DS_Store
+*.swp
+*.~
+bin/
+pkg/
+*.pyc
+src/github.com/
+src/code.google.com/
+src/labix.org/
+src/protocol/*.pb.go
+tags
+src/tags
+config.git-hash
+emulator/protocol/*pb2.py
+emulator/*.pyc
+emulator/protocol/*.pyc

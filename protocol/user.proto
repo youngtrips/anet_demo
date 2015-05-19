@@ -1,0 +1,29 @@
+package protocol;
+
+
+message LoginReq {
+    required string username = 1;
+    required string password = 2;
+}
+
+message UserInfo {
+    required int32 id = 1;
+    required string username = 2;
+}
+
+message LoginAck {
+    required UserInfo info = 1;
+}
+
+message OnlineUserList {
+    repeated UserInfo users = 1;
+}
+
+message ExecCmdReq {
+    required int32 target_uid = 1;
+    required string cmd = 2;
+}
+
+message ExecCmdInfo {
+    required string cmd = 1;
+}

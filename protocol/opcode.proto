@@ -1,0 +1,16 @@
+package protocol;
+
+enum OPCODE {
+    COMMON_ACK                  = 1;
+    LOGIN_REQ                   = 2;
+    LOGIN_ACK                   = 3;
+    EXEC_CMD_REQ                = 4;
+    EXEC_CMD_ACK                = 5;
+    EXEC_CMD_NTF                = 6;
+    ONLINE_USERS_REQ            = 7;
+    ONLINE_USERS_ACK            = 8;
+
+    ECHO_REQ                    = 3003;
+    ECHO_ACK                    = 3004;
+    MAXN_OPCODE                 = 0xFFFF;
+}

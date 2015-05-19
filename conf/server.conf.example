@@ -1,0 +1,41 @@
+# daemonalize or nor
+daemon true
+
+#network configure
+network {
+    error_log logs/net.log
+    
+    # connections limit except outgoing connections
+    maxn_connections 1024
+
+    # count of messages pending to be processed for all connections
+    maxn_pending_read 65535
+
+    # count of messages pending to be sended for every connection
+    maxn_pending_send 1024
+
+    # keepalive 10 second
+    keepalive_timeout 10
+
+    # auto try to reconnect whie remote server is off, default is true
+    auto_reconnect true
+
+    # listen for services
+    listen {
+        #name   address
+        4client    0.0.0.0:9090
+    }
+
+    # connect to remote servers
+    connect {
+        #name   address;
+    }
+}
+
+database {
+    host localhost  # dbhost
+    port 3306       # dbport
+    username root   # username
+    password 123456 # password
+    dbname scorpio  # dbname
+}

@@ -1,0 +1,36 @@
+package protocol;
+
+import "protocol/opcode.proto";
+import "protocol/error.proto";
+
+message Packet {
+    required OPCODE opcode = 1;
+    required bytes payload = 2;
+}
+
+message CommonAck {
+    required OPCODE opcode = 1;
+    required ERROR errno = 2;
+}
+
+message ForwardMessage {
+    required int64 user_id = 1;
+    required bytes payload = 2;
+}
+
+message GroupcastMessage {
+    required int64 users = 1;
+    required Packet packet = 2;
+}
+
+message BroadcastMessage {
+    required int32 servers = 1;
+    required Packet packet = 2;
+}
+
+message EchoMessage {
+    required string content = 1;
+}
+
+message NullMessage {
+}
