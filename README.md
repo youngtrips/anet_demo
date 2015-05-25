@@ -1,1 +1,1 @@
-a simple sample for anet
+a simple gameserver sample for anet
